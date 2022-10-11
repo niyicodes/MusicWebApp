@@ -1,0 +1,1 @@
+This project is one of the Intermediate challenges on FRONTEND MENTOR, i took this challenge the time i was learngin TAILWINDCSS. This project was done with VITE + REACT styled with TAILWINDCSS.
