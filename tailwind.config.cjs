@@ -17,6 +17,9 @@ module.exports = {
    bigCard:"#609EAF",
    textFill:"white"
   },
+  fontFamily:{
+   'quickSand': ['Quicksand']
+  },
   extend: {},
  },
  plugins: [],

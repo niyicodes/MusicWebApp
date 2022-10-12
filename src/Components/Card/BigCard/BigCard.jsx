@@ -2,9 +2,9 @@ import React from "react";
 
 const BigCard = () => {
  return (
-  <div className="rounded-xl bg-bigCard flex gap-3 w-4/6 p-10 h-80 text-textFill">
-   <div className="text flex flex-col justify-between gap-7">
-    <h4 className="text-lg ">Currated playlist</h4>
+  <div className="rounded-xl bg-bigCard flex gap-3 w-2/4 p-10 py-40 h-80 text-textFill items-center font-quickSand font-700 overflow-hidden">
+   <div className="text flex flex-col justify-between ">
+    <h4 className="text-lg mt-3 pt-3">Currated playlist</h4>
     <div className="details mb-12 mt-5">
      <h1 className="text-5xl">R & B Hits</h1>
      <p className="w-3/5">
@@ -12,7 +12,7 @@ const BigCard = () => {
       habit,and so much more
      </p>
     </div>
-    <div className="figure mb-4">
+    <div className="figure mb-4 relative">
      <figure className="hitsimage relative -top-8">
       <img
        src="/assets/person1.jpg"
@@ -43,8 +43,13 @@ const BigCard = () => {
      <span>i am here to stay</span>
     </div>
    </div>
-   <div className="img">
-    <img src="/assets/Esma.png" alt="Esma" className="-ml-6 items-center justify-center align-middle "/>
+   <div className="img -mt-10 relative">
+    <img
+     src="/assets/Esma.png"
+     alt="Esma"
+     className="z-50 absolute top-12 -ml-4 items-center justify-center align-middle mt-8 h-72 hidden lg:block"
+    />
+    <img src="/assets/tunnel.png" alt="tunnel" className="z-10 h-96 " />
    </div>
   </div>
  );

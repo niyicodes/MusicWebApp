@@ -6,7 +6,7 @@ import Home from "./Pages/MainPage/MainPage";
 
 function App() {
  return (
-  <div className="flex bg-bgColor">
+  <div className="flex">
    <div className="side w-20 p-5">
     <SideBar />
    </div>
