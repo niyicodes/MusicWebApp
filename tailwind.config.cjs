@@ -14,6 +14,8 @@ module.exports = {
    lcColor: "#1A1E1F",
    border: "#FACD66",
    circleColor: "#FFFFFF",
+   bigCard:"#609EAF",
+   textFill:"white"
   },
   extend: {},
  },

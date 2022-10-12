@@ -1,10 +1,16 @@
 import React from "react";
+import BigCard from "../../Components/Card/BigCard/BigCard";
 
 
 const HomePage = () => {
  return (
-  <div className="jusify-center hover:text-green-500">
-   just and empty page for now
+  <div className="">
+   <div className="left flex gap-4 mt-10">
+   <BigCard />
+    just here for now
+   </div>
+   <div className="right">
+   </div>
   </div>
  );
 };
