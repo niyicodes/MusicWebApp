@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon{
+ @apply active:fill-activeColor pb-1 w-8 h-14 hover:text-activeColor text-iconFill
+}

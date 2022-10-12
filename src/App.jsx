@@ -6,14 +6,19 @@ import Home from "./Pages/MainPage/MainPage";
 
 function App() {
  return (
-  <div className="flex gap-4">
-   <div className="side w-20 p-5 pl-4 border border-red-400">
+  <div className="flex bg-bgColor">
+   <div className="side w-20 p-5">
     <SideBar />
    </div>
-   <div className="main border border-blue-400 w-screen h-screen">
+   <div className="main pl-3 w-screen h-screen">
     <Header />
     <Routes>
-     <Route path="/" element={<Home />} />
+     <Route exact path="/" element={<Home />} />
+     <Route path="/playlist" element={<Home />} />
+     <Route path="/radio" element={<Home />} />
+     <Route path="/videos" element={<Home />} />
+     <Route path="/profile" element={<Home />} />
+     <Route path="/logout" element={<Home />} />
     </Routes>
    </div>
   </div>

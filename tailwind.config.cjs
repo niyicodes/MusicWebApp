@@ -1,14 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html","./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    screens: {
-      'sm': '280px',
-      'md': '576px',
-      'lg': '1024px',
-
-    },
-    extend: {},
+ content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+ theme: {
+  screens: {
+   sm: "280px",
+   md: "576px",
+   lg: "1024px",
   },
-  plugins: [],
-}
+  colors: {
+   bgColor: "#1E1E1E",
+   iconFill: "#B6B6B4",
+   activeColor: "#FACD66",
+   lcColor: "#1A1E1F",
+   border: "#FACD66",
+   circleColor: "#FFFFFF",
+  },
+  extend: {},
+ },
+ plugins: [],
+};
