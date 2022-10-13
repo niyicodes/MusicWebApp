@@ -13,3 +13,23 @@
 .nav{
  @apply rounded bg-lcColor m-auto p-2
 }
+
+.scroll{
+ @apply inline-block w-full whitespace-nowrap space-x-4 overflow-x-scroll cursor-pointer 
+}
+
+.longcard{
+ @apply bg-lcColor my-2 py-4 px-2 flex gap-3 w-96 rounded-xl text-textFill
+}
+
+.bigcard{
+ @apply rounded-xl bg-bigCard flex gap-3 w-3/5 h-96 p-10 py-40  text-textFill items-center font-quickSand overflow-hidden
+}
+
+.search{
+ @apply w-full h-12 text-iconFill relative mb-8 mt-4 ml-8
+}
+
+.scroll::-webkit-scrollbar{
+ display: none;
+}

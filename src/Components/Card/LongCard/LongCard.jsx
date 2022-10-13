@@ -2,7 +2,7 @@ import React from "react";
 
 const LongCard = () => {
  return (
-  <div className="bg-lcColor my-2 py-4 px-2 flex gap-3 w-96 rounded-xl text-textFill">
+  <div className="longcard">
    <figure>
     <img
      src="/assets/person1.jpg"
@@ -10,7 +10,7 @@ const LongCard = () => {
      className="rounded-lg w-20 h-full"
     />
    </figure>
-   <div className="details grid grid-cols-2">
+   <div className="details grid grid-cols-2 gap-4">
     <div className="texts flex flex-col">
      <h2>Golden age of 80s</h2>
      <small className="text-iconFill">Sean swadder</small>

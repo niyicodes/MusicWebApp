@@ -2,7 +2,7 @@ import React from "react";
 
 const BigCard = () => {
  return (
-  <div className="rounded-xl bg-bigCard flex gap-3 w-2/4 p-10 py-40 h-80 text-textFill items-center font-quickSand font-700 overflow-hidden">
+  <div className="bigcard">
    <div className="text flex flex-col justify-between ">
     <h4 className="text-lg mt-3 pt-3">Currated playlist</h4>
     <div className="details mb-12 mt-5">

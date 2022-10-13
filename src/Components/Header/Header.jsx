@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Header = () => {
  return (
-  <div className="search w-full bg-gray-600 h-12 text-iconFill relative mb-3 mt-1.5">
+  <div className="search bg-gray-600">
    <FiSearch className="absolute top-6 left-4 text-lg"/>
    <input
     type="search"

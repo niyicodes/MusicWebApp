@@ -13,7 +13,7 @@ function App() {
    <div className="side w-20 p-5">
     <SideBar />
    </div>
-   <div className="main pl-3 w-screen h-screen">
+   <div className="main pl-3 w-full">
     <Header />
     <Routes>
      <Route path="/" element={<Home />} />
