@@ -6,8 +6,9 @@ import { TbPlaylist, TbLogout } from "react-icons/tb";
 import { HiOutlineFilm, HiHome } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 
+
+
 const SideBar = () => {
- const [active, setActive] = useState(true);
  return (
   <aside className="flex flex-col gap-4">
    <div className="nav">
@@ -34,8 +35,8 @@ const SideBar = () => {
    </div>
    <nav className="rounded bg-lcColor m-auto p-2">
     <ul className="mb-3 rounded bg-lcColor">
-     <Link to="/" active>
-      <HiHome className="icon"/>
+     <Link to="/">
+      <HiHome className="icon" />
      </Link>
      <Link to="/playlist">
       <TbPlaylist className="icon" />
@@ -53,7 +54,7 @@ const SideBar = () => {
      <Link to="/profile">
       <BsFillPersonFill className="icon" />
      </Link>
-     <Link to="/logout">
+     <Link to="/">
       <TbLogout className="icon" />
      </Link>
     </ul>

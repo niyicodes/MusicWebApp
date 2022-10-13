@@ -7,5 +7,9 @@
 
 
 .icon{
- @apply active:fill-activeColor pb-1 w-8 h-14 hover:text-activeColor text-iconFill
+ @apply active:text-activeColor pb-1 w-8 h-14 hover:text-activeColor text-iconFill
+}
+
+.nav{
+ @apply rounded bg-lcColor m-auto p-2
 }
