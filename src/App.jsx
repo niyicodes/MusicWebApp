@@ -10,7 +10,7 @@ import Video from "./Pages/Videos/Video";
 function App() {
  return (
   <div className="flex">
-   <div className="side w-20 p-5">
+   <div className="side hidden lg:block w-20 p-5">
     <SideBar />
    </div>
    <div className="main pl-3 w-full">

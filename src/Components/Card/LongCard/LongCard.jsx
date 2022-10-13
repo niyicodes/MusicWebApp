@@ -7,16 +7,16 @@ const LongCard = () => {
     <img
      src="/assets/person1.jpg"
      alt="person1"
-     className="rounded-lg w-20 h-full"
+     className="rounded-lg w-24 h-20 lg:w-24 lg:h-full"
     />
    </figure>
-   <div className="details grid grid-cols-2 gap-4">
-    <div className="texts flex flex-col">
+   <div className="details grid grid-cols-2 gap-4 relative lg:block">
+    <div className="texts flex flex-col pt-4 lg:pt-0">
      <h2>Golden age of 80s</h2>
      <small className="text-iconFill">Sean swadder</small>
-     <span>2:34:45</span>
+     <span className="pt-4">2:34:45</span>
     </div>
-    <figure className="rounded-full border border-circleColor p-3 self-center ml-auto">
+    <figure className="rounded-full border border-circleColor p-3 self-center ml-auto absolute right-0 -top-20 lg:block lg:top-6 lg:-right-28">
      <svg
       className="items-center justify-center hover:fill-activeColor"
       width="16"

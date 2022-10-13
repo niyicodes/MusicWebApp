@@ -18,18 +18,26 @@
  @apply inline-block w-full whitespace-nowrap space-x-4 overflow-x-scroll cursor-pointer 
 }
 
+.scroll::-webkit-scrollbar{
+ display: none;
+}
+
 .longcard{
- @apply bg-lcColor my-2 py-4 px-2 flex gap-3 w-96 rounded-xl text-textFill
+ @apply bg-lcColor my-2 py-4 px-2 lg:flex gap-3 w-full lg:w-96 rounded-xl text-textFill border border-activeColor inline-block
 }
 
 .bigcard{
- @apply rounded-xl bg-bigCard flex gap-3 w-3/5 h-96 p-10 py-40  text-textFill items-center font-quickSand overflow-hidden
+ @apply rounded-xl bg-bigCard flex gap-3 w-full lg:w-3/5 h-96 p-10 py-40  text-textFill items-center font-quickSand overflow-hidden
 }
 
 .search{
  @apply w-full h-12 text-iconFill relative mb-8 mt-4 ml-8
 }
 
-.scroll::-webkit-scrollbar{
- display: none;
+.hits{
+ @apply w-7 h-7 lg:w-12 lg:h-10 rounded-full absolute justify-center
+}
+
+.scrolltext{
+ @apply py-3 text-2xl text-textFill
 }
