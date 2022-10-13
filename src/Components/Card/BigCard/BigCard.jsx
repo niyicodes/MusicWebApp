@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const BigCard = () => {
@@ -8,7 +9,8 @@ const BigCard = () => {
     <div className="details lg:mb-12 lg:mt-5 mt-16">
      <h1 className="text-4xl lg:text-5xl">R & B Hits</h1>
      <p className=" text-lg pt-3">
-      All mine, Lie again, Petty call me everyday, Out of time, No love, Bad habit,and so much more
+      All mine, Lie again, Petty call me everyday, Out of time, No love, Bad
+      habit,and so much more
      </p>
     </div>
     <div className="figure mb-4 grid grid-cols-2 gap-6 align-middle items-center">
@@ -64,7 +66,13 @@ const BigCard = () => {
       alt="Esma"
       className="absolute z-50 top-4 hidden lg:block lg:h-full"
      />
-     <img src="/assets/tunnel.png" alt="tunnel" className="-skew-x-12 h-96 skew-y-3 hidden lg:block" />
+     <motion.img
+      src="/assets/tunnel.png"
+      alt="tunnel"
+      className="-skew-x-12 h-96 skew-y-3 hidden lg:block"
+      animate={{ rotateX: 10, rotateY: 35, rotateZ: 30 }}
+      transition={{ yoyo: Infinity }}
+     />
     </figure>
    </div>
   </div>
