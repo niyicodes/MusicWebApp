@@ -41,3 +41,19 @@
 .scrolltext{
  @apply py-3 text-2xl text-textFill
 }
+
+.collectionCard{
+ @apply relative cursor-pointer overflow-hidden
+}
+
+.album{
+ @apply  rounded-3xl h-56 w-56 mb-2 brightness-50 overflow-hidden object-cover block
+}
+
+.collectionCard:hover .album{
+ transform: scale(1.2);
+}
+
+.collectionCard:hover .likes{
+ display: block;
+}
