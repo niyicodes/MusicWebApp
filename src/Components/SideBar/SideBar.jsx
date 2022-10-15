@@ -6,16 +6,19 @@ import { HiOutlineFilm, HiHome } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-
-
 const SideBar = () => {
+ let activeStyle = {
+  color: "#FACD66",
+ };
+
+ let activeClassName = "#FACD66";
  return (
   <aside className="flex flex-col gap-4">
    <div className="nav">
     <motion.svg
-    initial={{y: 0, x:0}}
-    animate={{y:['4px', '-6px']}}
-    transition={{yoyo: Infinity}}
+     initial={{ y: 0, x: 0 }}
+     animate={{ y: ["4px", "-6px"] }}
+     transition={{ yoyo: Infinity }}
      width="34"
      height="34"
      viewBox="0 0 34 34"
@@ -38,9 +41,9 @@ const SideBar = () => {
    </div>
    <nav className="rounded bg-lcColor m-auto p-2">
     <ul className="mb-3 rounded bg-lcColor">
-      <Link to="/">
-       <HiHome className="icon" />
-      </Link>
+     <NavLink to="/" activeClassName="fill-activeColor">
+      <HiHome className="icon" />
+     </NavLink>
      <Link to="/playlist">
       <TbPlaylist className="icon" />
      </Link>
