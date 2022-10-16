@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Header/Header";
+import Player from "./Components/Player/Player";
 import SideBar from "./Components/SideBar/SideBar";
 import Home from "./Pages/MainPage/MainPage";
 import Playlist from "./Pages/Playlist/Playlist";
@@ -13,7 +14,7 @@ function App() {
    <div className="side hidden lg:block w-20 p-5">
     <SideBar />
    </div>
-   <div className="main pl-3 w-full">
+   <div className="main pl-3 w-full relative">
     <Header />
     <Routes>
      <Route path="/" element={<Home />} />
@@ -22,6 +23,7 @@ function App() {
      <Route path="/videos" element={<Video />} />
      <Route path="/profile" element={<Home />} />
     </Routes>
+    <Player />
    </div>
   </div>
  );
