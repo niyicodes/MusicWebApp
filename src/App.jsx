@@ -7,11 +7,12 @@ import Home from "./Pages/MainPage/MainPage";
 import Playlist from "./Pages/Playlist/Playlist";
 import Radio from "./Pages/Radio/Radio";
 import Video from "./Pages/Videos/Video";
+import songsdata from "./Songs/Song";
 
 function App() {
- const [songs, setSongs] = useState();
+ const [songs, setSongs] = useState(songsdata);
  const [isPlaying, setIsPlaying] = useState(false);
- const [currentSong, setCurrentSong] =useState()
+ const [currentSong, setCurrentSong] =useState(songs[0])
  const audioElem = useRef()
 
  useEffect(() => {
@@ -43,9 +44,9 @@ function App() {
      <Route path="/videos" element={<Video />} />
      <Route path="/profile" element={<Home />} />
     </Routes>
-    <audio src="" ref={audioElem} onTimeUpdate={onplaying}/>
+    <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onplaying}/>
 
-    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElem={audioElem} currentSong={currentSong}/>
+    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
    </div>
   </div>
  );
