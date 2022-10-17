@@ -19,7 +19,7 @@
 }
 
 .scroll::-webkit-scrollbar{
- display: none;
+ @apply hidden
 }
 
 .longcard{
@@ -55,5 +55,38 @@
 }
 
 .collectionCard:hover .likes{
- display: block;
+ @apply block
+}
+
+.player{
+ @apply flex justify-around align-middle items-center backdrop-blur-md fixed w-screen bottom-0 z-50 -left-0 text-textFill h-24
+}
+
+.controls{
+ @apply  flex justify-between gap-12 my-4 cursor-pointer
+}
+
+input[type=range] {
+ height: 24px;
+ -webkit-appearance: none;
+ background-color: transparent;
+}
+input[type=range]:focus {
+ @apply outline-0
+}
+input[type=range]::-webkit-slider-runnable-track {
+ @apply w-full h-2 cursor-pointer bg-activeColor 
+ 
+}
+input[type=range]::-webkit-slider-thumb {
+ border: 3px solid rgb(240, 239, 239);
+ border-spacing: 5px;
+ padding: 1px 0;
+ height: 16px;
+ width: 16px;
+ border-radius: 49px;
+ background: #FACD66;
+ cursor: pointer;
+ -webkit-appearance: none;
+ margin-top: -4.5px;
 }
