@@ -41,7 +41,7 @@ const SideBar = () => {
    </div>
    <nav className="rounded bg-lcColor m-auto p-2">
     <ul className="mb-3 rounded bg-lcColor">
-     <NavLink to="/" activeClassName="fill-activeColor">
+     <NavLink to="/">
       <HiHome className="icon" />
      </NavLink>
      <Link to="/playlist">

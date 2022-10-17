@@ -67,15 +67,16 @@
 }
 
 input[type=range] {
- height: 24px;
+ height: 8px;
  -webkit-appearance: none;
  background-color: transparent;
 }
+
 input[type=range]:focus {
  @apply outline-0
 }
 input[type=range]::-webkit-slider-runnable-track {
- @apply w-full h-2 cursor-pointer bg-activeColor 
+ @apply w-full h-1 cursor-pointer bg-activeColor 
  
 }
 input[type=range]::-webkit-slider-thumb {
@@ -88,5 +89,5 @@ input[type=range]::-webkit-slider-thumb {
  background: #FACD66;
  cursor: pointer;
  -webkit-appearance: none;
- margin-top: -4.5px;
+ margin-top: -7.5px;
 }
