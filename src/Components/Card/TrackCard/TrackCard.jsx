@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFillPlayFill } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 const TrackCard = () => {
  return (
   <div className="flex bg-lcColor p-2 text-textFill justify-between items-center">
@@ -15,7 +15,7 @@ const TrackCard = () => {
    <span>{Math.floor(300 / 60)}</span>:
    <span>{("0" + (300 % 60)).slice(-2)}</span>
    </div>
-   <BsFillPlayFill />
+   <BsThreeDotsVertical />
   </div>
  );
 };
