@@ -1,13 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const SquareCard = () => {
+const SquareCard = ({ artist, title, image, song, }) => {
  return (
-  <div className='inline-block'>
-   <img src="/assets/person2.jpg" alt="person2" className='rounded-3xl h-36 w-56 mb-2'/>
-   <p className='text-textFill'>Life in a bubble</p>
-   <small className='text-iconFill'>The Van</small>
+  <div className="inline-block">
+   <Link to={`/albums/${title}`}>
+   <img
+    src={image}
+    alt="person2"
+    className="rounded-2xl h-44 w-48 mb-2 object-cover"
+   />
+   <p className="text-textFill">{title}</p>
+   <small className="text-iconFill">{artist}</small>
+   </Link>
   </div>
- )
-}
+ );
+};
 
 export default SquareCard;

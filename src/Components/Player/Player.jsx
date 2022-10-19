@@ -58,13 +58,13 @@ const Player = ({
   <main className="player">
    <div className="flex gap-3 items-center">
     <img
-     src="/assets/person4.jpg"
+     src={currentSong.image}
      alt="person4"
      className="w-14 h-14 rounded-full"
     />
     <div className="d">
-     <p>ljflsjfs</p>
-     <small className="text-iconFill">slfn.smf</small>
+     <p>{currentSong.title}</p>
+     <small className="text-iconFill">{currentSong.artist}</small>
     </div>
    </div>
    <div className="divplayer text-2xl text-textFill">

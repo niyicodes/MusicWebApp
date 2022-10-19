@@ -14,11 +14,13 @@ module.exports = {
    lcColor: "#1A1E1F",
    border: "#FACD66",
    circleColor: "#FFFFFF",
-   bigCard:"#609EAF",
-   textFill:"white"
+   bigCard: "#609EAF",
+   textFill: "white",
+   altFill: "#A4C7C6",
+   alt2Fill: "#E5524A",
   },
-  fontFamily:{
-   'quickSand': ['Quicksand']
+  fontFamily: {
+   quickSand: ["Quicksand"],
   },
   extend: {},
  },

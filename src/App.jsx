@@ -1,8 +1,9 @@
-import React,{useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Player from "./Components/Player/Player";
 import SideBar from "./Components/SideBar/SideBar";
+import AlbumPage from "./Pages/AlbumPage/AlbumPage";
 import Home from "./Pages/MainPage/MainPage";
 import Playlist from "./Pages/Playlist/Playlist";
 import Radio from "./Pages/Radio/Radio";
@@ -12,23 +13,27 @@ import songsdata from "./Songs/Song";
 function App() {
  const [songs, setSongs] = useState(songsdata);
  const [isPlaying, setIsPlaying] = useState(false);
- const [currentSong, setCurrentSong] =useState(songs[0])
- const audioElem = useRef()
+ const [currentSong, setCurrentSong] = useState(songsdata[1]);
+ const audioElem = useRef();
 
  useEffect(() => {
-  if(isPlaying){
-   audioElem.current.play()
-  }else{
-   audioElem.current.pause()
+  if (isPlaying) {
+   audioElem.current.play();
+  } else {
+   audioElem.current.pause();
   }
- }, [isPlaying])
- 
- const onplaying = () =>{
+ }, [isPlaying]);
+
+ const onplaying = () => {
   const duration = audioElem.current.duration;
   const cTime = audioElem.current.currentTime;
 
-  setCurrentSong({...currentSong, "progress": cTime / duration * 100, "length": duration  })
- }
+  setCurrentSong({
+   ...currentSong,
+   progress: (cTime / duration) * 100,
+   length: duration,
+  });
+ };
 
  return (
   <div className="flex">
@@ -43,10 +48,19 @@ function App() {
      <Route path="/radio" element={<Radio />} />
      <Route path="/videos" element={<Video />} />
      <Route path="/profile" element={<Home />} />
+     <Route path="/albums/:title" element={<AlbumPage />} />
     </Routes>
-    <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onplaying}/>
+    <audio src={currentSong.song} ref={audioElem} onTimeUpdate={onplaying} />
 
-    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
+    <Player
+     songs={songs}
+     setSongs={setSongs}
+     isPlaying={isPlaying}
+     setIsPlaying={setIsPlaying}
+     audioElem={audioElem}
+     currentSong={currentSong}
+     setCurrentSong={setCurrentSong}
+    />
    </div>
   </div>
  );

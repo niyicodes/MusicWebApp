@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.button{
+ @apply flex gap-2 px-2 items-center border p-1 rounded-full
+}
 
 .icon{
  @apply active:text-activeColor pb-1 w-8 h-14 hover:text-activeColor text-iconFill

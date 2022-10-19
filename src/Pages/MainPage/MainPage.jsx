@@ -2,10 +2,12 @@ import React from "react";
 import BigCard from "../../Components/Card/BigCard/BigCard";
 import LongCard from "../../Components/Card/LongCard/LongCard";
 import SquareCard from "../../Components/Card/SquareCard/SquareCard";
+import songsdata from "../../Songs/Song";
 
-const HomePage = () => {
+const HomePage = ({isPlaying, setIsPlaying}) => {
+ 
  return (
-  <main className="mt-3 lg:ml-4 lg:mr-10 mr-6">
+  <main className="mt-3 lg:ml-4 lg:mr-10 mr-6"Au>
    <section className="left flex flex-col lg:flex-row ml-6">
     <BigCard />
     <div className="top text-textFill lg:ml-20 mt-6 lg:mt-0">
@@ -21,25 +23,27 @@ const HomePage = () => {
     <div className="new my-6">
      <h3 className="scrolltext">New releases</h3>
      <div className="scroll">
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
+      {songsdata.map(({ artist, title, image, song}) => {
+       return (
+        <SquareCard
+         key={title}
+         artist={artist}
+         title={title}
+         image={image}
+         song={song}
+        />
+       );
+      })}
      </div>
     </div>
     <div className="popular my-8">
      <h3 className="scrolltext">Popular in your area</h3>
      <div className="scroll">
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
-      <SquareCard />
+      {songsdata.map(({ artist, title, image, song }) => {
+       return (
+        <SquareCard artist={artist} title={title} image={image} song={song} />
+       );
+      })}
      </div>
     </div>
    </section>
