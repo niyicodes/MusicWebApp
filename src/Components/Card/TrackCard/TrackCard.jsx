@@ -8,7 +8,7 @@ const TrackCard = () => {
     {/* <img src={Heart} alt="" className="w-5" /> */}
    </div>
    <p>
-    Bank on itttttttttttttttttttttttttt ~ <span>Twice as tall</span>
+    Bank on it ~ <span>Twice as tall</span>
    </p>
    <h2>Single</h2>
    <div className="div">

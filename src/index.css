@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.albumdiv{
+ @apply flex flex-col gap-3 text-textFill justify-end ml-3 mb-6
+}
+
 .button{
  @apply flex gap-2 px-2 items-center border p-1 rounded-full
 }
