@@ -21,7 +21,7 @@ const AlbumPage = ({ image, title, artist }) => {
      </p>
      <p>
       <span> 8 tracks </span> -<span> 4 hrs </span>
-      <span> 700mins </span>
+      <span> 25mins </span>
      </p>
 
      <div className="flex gap-4 items-center">

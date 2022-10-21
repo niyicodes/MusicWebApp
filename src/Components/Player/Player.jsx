@@ -8,6 +8,7 @@ import {
 } from "react-icons/bs";
 import { FiRepeat } from "react-icons/fi";
 import Range from "../Range/Range";
+import { motion } from "framer-motion";
 
 const Player = ({
  audioElem,
@@ -57,11 +58,17 @@ const Player = ({
  return (
   <main className="player">
    <div className="flex gap-3 items-center">
-    <img
+    {isPlaying ? <motion.img
+    animate={{rotate:360}}
+    transition={{ repeat: Infinity, repeatType:"loop", ease:'linear'  }}
      src={currentSong.image}
      alt="person4"
      className="w-14 h-14 rounded-full"
-    />
+    /> : (<img
+      src={currentSong.image}
+      alt="person4"
+      className="w-14 h-14 rounded-full"
+     />)}
     <div className="d">
      <p>{currentSong.title}</p>
      <small className="text-iconFill">{currentSong.artist}</small>
@@ -69,15 +76,15 @@ const Player = ({
    </div>
    <div className="divplayer text-2xl text-textFill">
     <div className="controls ">
-     <BsShuffle className="control" />
-     <GiPreviousButton className="control" onClick={prev} />
+     <BsShuffle className="control hidden lg:block" />
+     <GiPreviousButton className="control hidden lg:block" onClick={prev} />
      {isPlaying ? (
       <BsFillPauseFill className="control" onClick={playPause} />
      ) : (
       <BsFillPlayFill className="control" onClick={playPause} />
      )}
      <GiNextButton className="control" onClick={next} />
-     <FiRepeat className="control" />
+     <FiRepeat className="control hidden lg:block" />
     </div>
     <Range
      className="w-full lg:w-96"
@@ -86,7 +93,7 @@ const Player = ({
      onClick={checkWidth}
     />
    </div>
-   <div className="divVolumw cursor-pointer flex gap-2 items-center">
+   <div className="divVolumw cursor-pointer  gap-2 items-center hidden lg:flex">
     <BsFillVolumeUpFill className="" />
     <Range className="w-full" />
    </div>

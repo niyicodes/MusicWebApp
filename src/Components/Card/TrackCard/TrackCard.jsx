@@ -2,7 +2,7 @@ import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 const TrackCard = () => {
  return (
-  <div className="flex bg-lcColor p-2 text-textFill justify-between items-center">
+  <div className="track">
    <div className="flex gap-4">
     <img src="/assets/person4.jpg" className="h-16 w-16 rounded-2xl" />
     {/* <img src={Heart} alt="" className="w-5" /> */}

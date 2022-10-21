@@ -9,7 +9,7 @@
 }
 
 .button{
- @apply flex gap-2 px-2 items-center border p-1 rounded-full
+ @apply flex gap-2 px-2 items-center border-0 p-1 rounded-full bg-activeColor
 }
 
 .icon{
@@ -29,11 +29,11 @@
 }
 
 .longcard{
- @apply bg-lcColor my-2 py-4 px-2 lg:flex gap-3 w-full lg:w-96 rounded-xl text-textFill border border-activeColor inline-block
+ @apply bg-lcColor my-2 py-4 px-2 lg:flex lg:justify-between gap-3 w-full lg:w-96 rounded-xl text-textFill border border-activeColor inline-block relative
 }
 
 .bigcard{
- @apply rounded-xl bg-bigCard flex gap-3 w-full lg:w-3/5 h-96 p-10 py-40  text-textFill items-center font-quickSand overflow-hidden
+ @apply rounded-xl bg-bigCard flex gap-3 w-full lg:w-5/6 h-96 p-10 py-40  text-textFill items-center font-quickSand overflow-hidden
 }
 
 .search{
@@ -42,6 +42,10 @@
 
 .hits{
  @apply w-7 h-7 lg:w-12 lg:h-10 rounded-full absolute justify-center
+}
+
+.track{
+ @apply flex bg-lcColor p-2 text-textFill justify-between items-center cursor-pointer
 }
 
 .scrolltext{
@@ -90,14 +94,5 @@ input[type=range]::-webkit-slider-runnable-track {
  
 }
 input[type=range]::-webkit-slider-thumb {
- border: 3px solid rgb(240, 239, 239);
- border-spacing: 5px;
- padding: 1px 0;
- height: 16px;
- width: 16px;
- border-radius: 49px;
- background: #FACD66;
- cursor: pointer;
- -webkit-appearance: none;
- margin-top: -7.5px;
+ display: none;
 }
