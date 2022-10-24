@@ -58,17 +58,21 @@ const Player = ({
  return (
   <main className="player">
    <div className="flex gap-3 items-center">
-    {isPlaying ? <motion.img
-    animate={{rotate:360}}
-    transition={{ repeat: Infinity, repeatType:"loop", ease:'linear'  }}
-     src={currentSong.image}
-     alt="person4"
-     className="w-14 h-14 rounded-full"
-    /> : (<img
+    {isPlaying ? (
+     <motion.img
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, repeatType: "loop", ease:"linear" }}
       src={currentSong.image}
       alt="person4"
       className="w-14 h-14 rounded-full"
-     />)}
+     />
+    ) : (
+     <img
+      src={currentSong.image}
+      alt="person4"
+      className="w-14 h-14 rounded-full"
+     />
+    )}
     <div className="d">
      <p>{currentSong.title}</p>
      <small className="text-iconFill">{currentSong.artist}</small>

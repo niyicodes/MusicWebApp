@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CollectionCard from "../../Components/Card/CollectionCard/CollectionCard";
 
 const Playlist = () => {
+ useEffect(() => {
+  const options = {
+   method: 'GET',
+   headers: {
+    'X-RapidAPI-Key': '11c2e64a9bmsh30bc82dc262039ap110e07jsn34bfdddea5fa',
+    'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+   }
+  };
+  
+  fetch('https://shazam.p.rapidapi.com/songs/list-artist-top-tracks?id=%3CREQUIRED%3E', options)
+   .then(response => response.json())
+   .then(response => console.log(response))
+   .catch(err => console.error(err));
+ });
  return (
   <main className="h-full text-textFill">
    <nav className="my-4">

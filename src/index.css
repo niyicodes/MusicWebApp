@@ -45,7 +45,7 @@
 }
 
 .track{
- @apply flex bg-lcColor p-2 text-textFill justify-between items-center cursor-pointer
+ @apply flex gap-3 bg-lcColor p-2 text-textFill justify-between items-center cursor-pointer
 }
 
 .scrolltext{

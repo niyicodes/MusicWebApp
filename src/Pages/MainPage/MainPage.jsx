@@ -8,7 +8,7 @@ const HomePage = ({ isPlaying, setIsPlaying }) => {
  return (
   <main className="mt-3 lg:ml-4 lg:mr-10 mr-6">
    <section className="flex flex-col lg:flex-row justify-between">
-    <div className="big-card w-5/6">
+    <div className="big-card lg:w-5/6">
     <BigCard />
     </div>
     <div className="top text-textFill mt-6 lg:mt-0">

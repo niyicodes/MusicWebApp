@@ -6,12 +6,12 @@ import { TbPlaylist } from "react-icons/tb";
 import TrackCard from "../../Components/Card/TrackCard/TrackCard";
 const AlbumPage = ({ image, title, artist }) => {
  return (
-  <div>
-   <section className="flex">
+  <div className="mr-4">
+   <section className=" flex lg:flex-row flex-col">
     <img
      src="/assets/person4.jpg"
      alt=""
-     className="h-60 w-72 object-cover rounded-3xl"
+     className="w-full h-72 lg:h-60 lg:w-72 object-cover rounded-3xl"
     />
 
     <div className="albumdiv">

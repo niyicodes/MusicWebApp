@@ -7,7 +7,7 @@ const TrackCard = () => {
     <img src="/assets/person4.jpg" className="h-16 w-16 rounded-2xl" />
     {/* <img src={Heart} alt="" className="w-5" /> */}
    </div>
-   <p>
+   <p className="flex flex-col lg:flex-row text-ellipsis">
     Bank on it ~ <span>Twice as tall</span>
    </p>
    <h2>Single</h2>
