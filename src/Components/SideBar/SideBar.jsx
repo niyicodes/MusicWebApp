@@ -6,13 +6,13 @@ import { HiOutlineFilm, HiHome } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-const SideBar = () => {
+const SideBar = ({handleClick}) => {
  let activeStyle = {
   color: "#FACD66",
  };
 
- const [click, setClick] = useState(false);
- const handleClick = () => setClick(!click)
+ 
+ 
 
  let activeClassName = "#FACD66";
  return (
@@ -26,26 +26,26 @@ const SideBar = () => {
    <nav className="rounded bg-lcColor m-auto p-2">
     <ul className="mb-3 rounded bg-lcColor">
      <NavLink to="/">
-      <HiHome className="icon" />
+      <HiHome className="icon" onClick={handleClick}/>
      </NavLink>
      <Link to="/playlist">
-      <TbPlaylist className="icon" />
+      <TbPlaylist className="icon" onClick={handleClick}/>
      </Link>
      <Link to="/radio">
-      <BiRadio className="icon" />
+      <BiRadio className="icon" onClick={handleClick}/>
      </Link>
      <Link to="/videos">
-      <HiOutlineFilm className="icon" />
+      <HiOutlineFilm className="icon" onClick={handleClick}/>
      </Link>
     </ul>
    </nav>
    <nav className="nav nav rounded bg-lcColor m-auto p-2">
     <ul>
      <Link to="/profile">
-      <BsFillPersonFill className="icon" />
+      <BsFillPersonFill className="icon" onClick={handleClick}/>
      </Link>
      <Link to="/">
-      <TbLogout className="icon" />
+      <TbLogout className="icon" onClick={handleClick}/>
      </Link>
     </ul>
    </nav>

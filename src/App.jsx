@@ -34,14 +34,15 @@ function App() {
    length: duration,
   });
  };
- const [click, setClick] = useState(false);
+ const [click, setClick] = useState(true);
+ const handleClick = () => setClick(!click)
  return (
   <div className="flex">
-   <div className={click ? "side lg:block w-20 p-5" : "hidden"}>
-    <SideBar />
+   <div className={click ? "side lg:flex-col w-20 p-5 my-20" : "hidden"}>
+    <SideBar handleClick={handleClick}/>
    </div>
    <div className={click ? "main pl-3 w-full relative" : "w-screen"}>
-    <Header />
+    <Header handleClick={handleClick} click={click}/>
     <Routes>
      <Route path="/" element={<Home />} />
      <Route path="/playlist" element={<Playlist />} />
