@@ -34,7 +34,7 @@ function App() {
    length: duration,
   });
  };
- const [click, setClick] = useState(true);
+ const [click, setClick] = useState(false);
  return (
   <div className="flex">
    <div className={click ? "side lg:block w-20 p-5" : "hidden"}>

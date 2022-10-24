@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SquareCard = ({ artist, title, image, song, }) => {
+const SquareCard = ({ artist, title, image, song, url}) => {
  return (
   <div className="inline-block">
+   <audio src={url}/>
    <Link to={`/albums/${title}`}>
    <img
     src={image}
