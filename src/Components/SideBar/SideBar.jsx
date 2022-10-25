@@ -7,14 +7,14 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const SideBar = ({handleClick}) => {
- let activeStyle = {
-  color: "#FACD66",
- };
+ // let activeStyle = {
+ //  color: "#FACD66",
+ // };
 
  
  
 
- let activeClassName = "#FACD66";
+ // let activeClassName = "#FACD66";
  return (
   <aside className="flex flex-col gap-4">
    <div className="nav">

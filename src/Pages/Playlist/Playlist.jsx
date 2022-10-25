@@ -1,26 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CollectionCard from "../../Components/Card/CollectionCard/CollectionCard";
 
 const Playlist = () => {
+ const [playlist, setPlaylist] = useState([]);
  useEffect(() => {
   const options = {
-   method: 'GET',
-   headers: {
-    'X-RapidAPI-Key': '11c2e64a9bmsh30bc82dc262039ap110e07jsn34bfdddea5fa',
-    'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-   }
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '11c2e64a9bmsh30bc82dc262039ap110e07jsn34bfdddea5fa',
+      'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+    }
   };
   
-  fetch('https://shazam.p.rapidapi.com/songs/list-artist-top-tracks?id=%3CREQUIRED%3E', options)
-   .then(response => response.json())
-   .then(response => console.log(response))
-   .catch(err => console.error(err));
+  fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+    .then(response => response.json())
+    .then((data) => {
+      const playlistTracks = data.items;
+      const tracks = playlistTracks.track
+      console.log(tracks)
+    })
+    .catch(err => console.error(err));
  });
  return (
   <main className="h-full text-textFill">
-   <nav className="my-4">
+   <nav className="m-4">
     <ul className="flex gap-4 text-sm lg:text-lg">
      <li className="bg-activeColor p-4 py-2 rounded-full border border-circleColor text-center">
       <Link to="/playlist">My collection</Link>
@@ -30,7 +35,7 @@ const Playlist = () => {
      </li>
     </ul>
    </nav>
-   <div className="grid grid-rows-2 gap-4 md:grid-cols-2 md:justify-center md:place-content-center md:items-center lg:grid-cols-4">
+   <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:justify-center md:place-content-center md:items-center lg:grid-cols-4 mx-3">
     <CollectionCard />
     <CollectionCard />
     <CollectionCard />
