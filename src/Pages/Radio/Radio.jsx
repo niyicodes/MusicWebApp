@@ -4,33 +4,33 @@ import SquareCard from "../../Components/Card/SquareCard/SquareCard";
 
 const Radio = () => {
  const [radio, setRadio] = useState([]);
- useEffect(() => {
-  const options = {
-   method: "GET",
-   headers: {
-    "X-RapidAPI-Key": "11c2e64a9bmsh30bc82dc262039ap110e07jsn34bfdddea5fa",
-    "X-RapidAPI-Host": "shazam.p.rapidapi.com",
-   },
-  };
+//  useEffect(() => {
+//   const options = {
+//    method: "GET",
+//    headers: {
+//     "X-RapidAPI-Key": "11c2e64a9bmsh30bc82dc262039ap110e07jsn34bfdddea5fa",
+//     "X-RapidAPI-Host": "shazam.p.rapidapi.com",
+//    },
+//   };
 
-  fetch(
-   "https://shazam.p.rapidapi.com/charts/track?locale=en-NGN&pageSize=20&startFrom=0",
-   options
-  )
-   .then((response) => response.json())
-   .then((data) => {
-    const tracks = data.tracks.map((track) => ({
-     ...track,
-     artist: track.artists,
-     image: track.images.coverart,
-     subtitle: track.subtitle,
-     title: track.title,
-     url: track.url,
-    }));
-    setRadio(tracks);
-   })
-   .catch((err) => console.error(err));
- }, []);
+//   fetch(
+//    "https://shazam.p.rapidapi.com/charts/track?locale=en-NGN&pageSize=20&startFrom=0",
+//    options
+//   )
+//    .then((response) => response.json())
+//    .then((data) => {
+//     const tracks = data.tracks.map((track) => ({
+//      ...track,
+//      artist: track.artists,
+//      image: track.images.coverart,
+//      subtitle: track.subtitle,
+//      title: track.title,
+//      url: track.url,
+//     }));
+//     setRadio(tracks);
+//    })
+//    .catch((err) => console.error(err));
+//  }, []);
  return (
   <div
    className="flex mx-3 h-full text-textFill"
@@ -39,7 +39,7 @@ const Radio = () => {
    //   rotate: [0, 90, 270, 360, 0], x:"0", y:"-10vh", color:"#C6BF5E",}}
    //  transition={{ duration: 3, type:"spring", stiffness:80,}}
   >
-   <div className="radioarea grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
+   <div className="radioarea grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-5 mx-auto">
    {radio.map((track) => {
      return(
        <SquareCard key={track.title} image={track.image} title={track.title}artist={track.subtitle} url={track.url}/>

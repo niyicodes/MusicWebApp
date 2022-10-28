@@ -6,13 +6,10 @@ import { HiOutlineFilm, HiHome } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-const SideBar = ({handleClick}) => {
+const SideBar = ({ handleClick }) => {
  // let activeStyle = {
  //  color: "#FACD66",
  // };
-
- 
- 
 
  // let activeClassName = "#FACD66";
  return (
@@ -23,32 +20,32 @@ const SideBar = ({handleClick}) => {
     </div>
    </div>
    <div>
-   <nav className="rounded bg-lcColor m-auto p-2">
-    <ul className="mb-3 rounded bg-lcColor">
-     <NavLink to="/">
-      <HiHome className="icon" onClick={handleClick}/>
-     </NavLink>
-     <Link to="/playlist">
-      <TbPlaylist className="icon" onClick={handleClick}/>
-     </Link>
-     <Link to="/radio">
-      <BiRadio className="icon" onClick={handleClick}/>
-     </Link>
-     <Link to="/videos">
-      <HiOutlineFilm className="icon" onClick={handleClick}/>
-     </Link>
-    </ul>
-   </nav>
-   <nav className="nav nav rounded bg-lcColor m-auto p-2">
-    <ul>
-     <Link to="/profile">
-      <BsFillPersonFill className="icon" onClick={handleClick}/>
-     </Link>
-     <Link to="/">
-      <TbLogout className="icon" onClick={handleClick}/>
-     </Link>
-    </ul>
-   </nav>
+    <nav className="rounded bg-lcColor m-auto p-2">
+     <ul className="mb-3 rounded bg-lcColor">
+      <NavLink to="/">
+       <HiHome className="icon" />
+      </NavLink>
+      <Link to="/playlist">
+       <TbPlaylist className="icon" />
+      </Link>
+      <Link to="/radio">
+       <BiRadio className="icon" />
+      </Link>
+      <Link to="/videos">
+       <HiOutlineFilm className="icon" />
+      </Link>
+     </ul>
+    </nav>
+    <nav className="nav nav rounded bg-lcColor m-auto p-2">
+     <ul>
+      <Link to="/profile">
+       <BsFillPersonFill className="icon" />
+      </Link>
+      <Link to="/">
+       <TbLogout className="icon" />
+      </Link>
+     </ul>
+    </nav>
    </div>
   </aside>
  );

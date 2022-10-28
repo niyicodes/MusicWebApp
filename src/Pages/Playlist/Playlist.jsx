@@ -14,13 +14,9 @@ const Playlist = () => {
     }
   };
   
-  fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100', options)
+  fetch('https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv', options)
     .then(response => response.json())
-    .then((data) => {
-      const playlistTracks = data.items;
-      const tracks = playlistTracks.track
-      console.log(tracks)
-    })
+    .then(response => console.log(response))
     .catch(err => console.error(err));
  });
  return (

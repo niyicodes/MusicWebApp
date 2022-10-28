@@ -9,7 +9,7 @@ import Playlist from "./Pages/Playlist/Playlist";
 import Radio from "./Pages/Radio/Radio";
 import Video from "./Pages/Videos/Video";
 import songsdata from "./Songs/Song";
-
+// import Trending from "./Songs/Trending";
 function App() {
  const [songs, setSongs] = useState(songsdata);
  const [isPlaying, setIsPlaying] = useState(false);
@@ -35,14 +35,14 @@ function App() {
   });
  };
  const [click, setClick] = useState(true);
- const handleClick = () => setClick(!click)
+ const handleClick = () => setClick(!click);
  return (
   <div className="flex">
    <div className={click ? "side lg:flex-col w-20 p-5 my-20" : "hidden"}>
-    <SideBar handleClick={handleClick}/>
+    <SideBar handleClick={handleClick} />
    </div>
    <div className={click ? "main pl-3 w-full relative" : "w-screen"}>
-    <Header handleClick={handleClick} click={click}/>
+    <Header handleClick={handleClick} click={click} />
     <Routes>
      <Route path="/" element={<Home />} />
      <Route path="/playlist" element={<Playlist />} />
